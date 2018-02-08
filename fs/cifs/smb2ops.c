@@ -1022,6 +1022,7 @@ smb2_is_status_pending(char *buf, struct TCP_Server_Info *server, int length)
 	return true;
 }
 
+/*
 static bool
 smb2_is_session_expired(char *buf)
 {
@@ -1033,6 +1034,7 @@ smb2_is_session_expired(char *buf)
 	cifs_dbg(FYI, "Session expired\n");
 	return true;
 }
+*/
 
 static int
 smb2_oplock_response(struct cifs_tcon *tcon, struct cifs_fid *fid,
@@ -2272,7 +2274,7 @@ struct smb_version_operations smb20_operations = {
 	.close_dir = smb2_close_dir,
 	.calc_smb_size = smb2_calc_size,
 	.is_status_pending = smb2_is_status_pending,
-	.is_session_expired = smb2_is_session_expired,
+//	.is_session_expired = smb2_is_session_expired,
 	.oplock_response = smb2_oplock_response,
 	.queryfs = smb2_queryfs,
 	.mand_lock = smb2_mand_lock,
@@ -2354,7 +2356,7 @@ struct smb_version_operations smb21_operations = {
 	.close_dir = smb2_close_dir,
 	.calc_smb_size = smb2_calc_size,
 	.is_status_pending = smb2_is_status_pending,
-	.is_session_expired = smb2_is_session_expired,
+//	.is_session_expired = smb2_is_session_expired,
 	.oplock_response = smb2_oplock_response,
 	.queryfs = smb2_queryfs,
 	.mand_lock = smb2_mand_lock,
@@ -2438,7 +2440,7 @@ struct smb_version_operations smb30_operations = {
 	.close_dir = smb2_close_dir,
 	.calc_smb_size = smb2_calc_size,
 	.is_status_pending = smb2_is_status_pending,
-	.is_session_expired = smb2_is_session_expired,
+//	.is_session_expired = smb2_is_session_expired,
 	.oplock_response = smb2_oplock_response,
 	.queryfs = smb2_queryfs,
 	.mand_lock = smb2_mand_lock,
@@ -2532,7 +2534,7 @@ struct smb_version_operations smb311_operations = {
 	.close_dir = smb2_close_dir,
 	.calc_smb_size = smb2_calc_size,
 	.is_status_pending = smb2_is_status_pending,
-	.is_session_expired = smb2_is_session_expired,
+//	.is_session_expired = smb2_is_session_expired,
 	.oplock_response = smb2_oplock_response,
 	.queryfs = smb2_queryfs,
 	.mand_lock = smb2_mand_lock,

@@ -1154,9 +1154,6 @@ SMB2_tcon(const unsigned int xid, struct cifs_ses *ses, const char *tree,
 	else
 		return -EIO;
 
-	if (tcon && tcon->bad_network_name)
-		return -ENOENT;
-
 	unc_path = kmalloc(MAX_SHARENAME_LENGTH * 2, GFP_KERNEL);
 	if (unc_path == NULL)
 		return -ENOMEM;
