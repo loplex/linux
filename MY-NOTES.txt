@@ -1,0 +1,123 @@
+4.9.65-3+deb9u2 - from upstream stable 4.9.52
+
+-----------------------------------------------------------------------
+
+CIFS: Fix possible use after free in demultiplex thread
+Commit 61cfac6f267dabcf2740a7ec8a0295833b28b5f5
+
+CIFS: Allow to switch on encryption with seal mount option
+Commit ae6f8dd4d0c87bfb72da9d9b56342adf53e69c31
+
+CIFS: Add capability to decrypt big read responses
+Commit c42a6abe3012832a68a371dabe17c2ced97e62ad
+
+CIFS: Decrypt and process small encrypted packets
+Commit 4326ed2f6a16ae9d33e4209b540dc9a371aba840
+
+CIFS: Add copy into pages callback for a read operation
+Commit d70b9104b1ca586f73aaf59426756cec3325a40e
+
+CIFS: Add mid handle callback
+Commit 9b7c18a2d4b798963ea80f6769701dcc4c24b55e
+
+CIFS: Add transform header handling callbacks
+Commit 9bb17e0916a03ab901fb684e874d77a1e96b3d1e
+
+CIFS: Encrypt SMB3 requests before sending
+Commit 026e93dc0a3eefb0be060bcb9ecd8d7a7fd5c398
+
+CIFS: Enable encryption during session setup phase
+Commit cabfb3680f78981d26c078a26e5c748531257ebb
+
+CIFS: Add capability to transform requests before sending
+Commit 7fb8986e7449d0a5cebd84d059927afa423fbf85
+
+CIFS: Separate RFC1001 length processing for SMB2 read
+Commit b8f57ee8aad414a3122bff72d7968a94baacb9b6
+
+CIFS: Separate SMB2 sync header processing
+Commit cb200bd6264a80c04e09e8635fa4f3901cabdaef
+
+CIFS: Send RFC1001 length in a separate iov
+Commit 738f9de5cdb9175c19d24cfdf90b4543fc3b47bf
+
+CIFS: Make send_cancel take rqst as argument
+Commit fb2036d817584df42504910fe104f68517e8990e
+
+CIFS: Make SendReceive2() takes resp iov
+Commit da502f7df03d2d0b416775f92ae022f3f82bedd5
+
+CIFS: Separate SMB2 header structure
+Commit 31473fc4f9653b73750d3792ffce6a6e1bdf0da7
+
+cifs: Add soft dependencies
+Commit b9be76d585d48cb25af8db0d35e1ef9030fbe13a
+
+cifs: Only select the required crypto modules
+Commit 3692304bba6164be3810afd41b84ecb0e1e41db1
+
+cifs: Simplify SMB2 and SMB311 dependencies
+Commit c1ecea87471bbb614f8121e00e5787f363140365
+
+-----------------------------------------------------------------------
+
+61cfac6f267dabcf2740a7ec8a0295833b28b5f5
+ae6f8dd4d0c87bfb72da9d9b56342adf53e69c31
+c42a6abe3012832a68a371dabe17c2ced97e62ad
+4326ed2f6a16ae9d33e4209b540dc9a371aba840
+d70b9104b1ca586f73aaf59426756cec3325a40e
+9b7c18a2d4b798963ea80f6769701dcc4c24b55e
+9bb17e0916a03ab901fb684e874d77a1e96b3d1e
+026e93dc0a3eefb0be060bcb9ecd8d7a7fd5c398
+cabfb3680f78981d26c078a26e5c748531257ebb
+7fb8986e7449d0a5cebd84d059927afa423fbf85
+b8f57ee8aad414a3122bff72d7968a94baacb9b6
+cb200bd6264a80c04e09e8635fa4f3901cabdaef
+738f9de5cdb9175c19d24cfdf90b4543fc3b47bf
+fb2036d817584df42504910fe104f68517e8990e
+da502f7df03d2d0b416775f92ae022f3f82bedd5
+31473fc4f9653b73750d3792ffce6a6e1bdf0da7
+b9be76d585d48cb25af8db0d35e1ef9030fbe13a
+3692304bba6164be3810afd41b84ecb0e1e41db1
+c1ecea87471bbb614f8121e00e5787f363140365
+
+-----------------------------------------------------------------------
+
+git cherry-pick c1ecea87471bbb614f8121e00e5787f363140365 ; echo $? 
+
+git cherry-pick 3692304bba6164be3810afd41b84ecb0e1e41db1 ; echo $? 
+
+git cherry-pick b9be76d585d48cb25af8db0d35e1ef9030fbe13a ; echo $? 
+
+git cherry-pick 31473fc4f9653b73750d3792ffce6a6e1bdf0da7 ; echo $? 
+
+git cherry-pick da502f7df03d2d0b416775f92ae022f3f82bedd5 ; echo $? 
+
+git cherry-pick fb2036d817584df42504910fe104f68517e8990e ; echo $? 
+
+git cherry-pick 738f9de5cdb9175c19d24cfdf90b4543fc3b47bf ; echo $? 
+
+git cherry-pick cb200bd6264a80c04e09e8635fa4f3901cabdaef ; echo $? 
+
+git cherry-pick b8f57ee8aad414a3122bff72d7968a94baacb9b6 ; echo $? 
+
+git cherry-pick 7fb8986e7449d0a5cebd84d059927afa423fbf85 ; echo $? 
+
+git cherry-pick cabfb3680f78981d26c078a26e5c748531257ebb ; echo $? 
+
+git cherry-pick 026e93dc0a3eefb0be060bcb9ecd8d7a7fd5c398 ; echo $? 
+
+git cherry-pick 9bb17e0916a03ab901fb684e874d77a1e96b3d1e ; echo $? 
+
+git cherry-pick 9b7c18a2d4b798963ea80f6769701dcc4c24b55e ; echo $? 
+
+git cherry-pick d70b9104b1ca586f73aaf59426756cec3325a40e ; echo $? 
+
+git cherry-pick 4326ed2f6a16ae9d33e4209b540dc9a371aba840 ; echo $? 
+
+git cherry-pick c42a6abe3012832a68a371dabe17c2ced97e62ad ; echo $? 
+
+git cherry-pick ae6f8dd4d0c87bfb72da9d9b56342adf53e69c31 ; echo $? 
+
+git cherry-pick 61cfac6f267dabcf2740a7ec8a0295833b28b5f5 ; echo $? 
+

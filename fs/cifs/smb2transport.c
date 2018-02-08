@@ -116,7 +116,7 @@ smb3_crypto_shash_allocate(struct TCP_Server_Info *server)
 }
 
 struct cifs_ses *
-smb2_find_smb_ses(struct TCP_Server_Info *server, __u64 ses_id)
+smb2_find_smb_ses_unlocked(struct TCP_Server_Info *server, __u64 ses_id)
 {
 	struct cifs_ses *ses;
 
@@ -155,7 +155,6 @@ smb2_find_smb_sess_tcon_unlocked(struct cifs_ses *ses, __u32  tid)
 
 	return NULL;
 }
-
 
 /*
  * Obtain tcon corresponding to the tid in the given
