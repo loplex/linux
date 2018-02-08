@@ -1,3 +1,25 @@
+                     Linux kernel release 4.9
+             for DEBIAN STRETCH with SMB3 encription
+                 <https://github.com/loplex/linux>
+
+The motivation of this branch is to make an exactly the same kernel as is
+included in Debian Stretch with the only addition of the support for CIFS
+SMB3 encryption, commonly available in kernel v4.11+ and and in customized
+kernels in Ubuntu distributions 16.04 xenial, 16.10 yakkety, 17.04 zesty, ...
+I was just inspired by Ubuntu backports of this feature into older kernels and
+also I try to reproduce the same steps done for Ubuntu backports with another
+kernel (4.9) and its customization (Debian Stretch). 
+
+The code was made by the following steps:
+1. Fork from upstream tag 'v4.9'
+2. Applying patch 'patch-4.9.80.gz'
+3. Cherry-picking SMB3 encryption related commits from upstream described at
+   https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1670508
+
+TO BE DONE:
+- debianize
+
+
         Linux kernel release 4.x <http://kernel.org/>
 
 These are the release notes for Linux version 4.  Read them carefully,
